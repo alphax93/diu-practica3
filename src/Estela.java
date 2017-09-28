@@ -18,7 +18,7 @@ public class Estela {
     public void setPoints(Point point) {
         points.addFirst(point);
         if(points.size()>5){
-            points.removeLast();
+            deletePoint(points.removeLast());
         } 
         
     }
@@ -26,5 +26,9 @@ public class Estela {
     public void setForma(String forma) {
         this.forma=forma;
     }
-    
+
+    private void deletePoint(Point removeLast) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

@@ -150,6 +150,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseMoved
         estela.setPoints(evt.getPoint());
+        
     }//GEN-LAST:event_jPanel1MouseMoved
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         int tmp = jComboBox2.getSelectedIndex();
