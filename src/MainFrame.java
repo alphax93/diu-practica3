@@ -20,6 +20,7 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
         graphics = jPanel1.getGraphics();
+        estela=new Estela();
     }
 
     @SuppressWarnings("unchecked")
@@ -143,21 +144,18 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
+        String forma =(String) jComboBox3.getSelectedItem();
+        estela.setForma(forma);
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jPanel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseMoved
-        // TODO add your handling code here:
+        estela.setPoints(evt.getPoint());
     }//GEN-LAST:event_jPanel1MouseMoved
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         int tmp = jComboBox2.getSelectedIndex();
-                
     }
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -180,7 +178,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainFrame().setVisible(true);
@@ -200,7 +197,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
     private Color[] color = {Color.YELLOW, Color.GREEN, Color.BLUE, Color.RED};
-    
     private Graphics graphics;
-    
+    private Estela estela;
 }
