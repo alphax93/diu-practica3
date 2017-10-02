@@ -51,5 +51,9 @@ public class Estela{
         }
     }
 
+    void clearPoints() {
+        points.clear();
+    }
+
 
 }

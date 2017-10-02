@@ -52,6 +52,11 @@ public class MainFrame extends javax.swing.JFrame {
                 jPanel1MouseMoved(evt);
             }
         });
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel1MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -177,6 +182,10 @@ public class MainFrame extends javax.swing.JFrame {
             estela.setColor(color[tmp]);
         }
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jPanel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseExited
+        estela.clearPoints();
+    }//GEN-LAST:event_jPanel1MouseExited
    
 
     public static void main(String args[]) {
