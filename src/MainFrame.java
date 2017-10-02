@@ -1,6 +1,8 @@
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -150,6 +152,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseMoved
         estela.setPoints(evt.getPoint());
+        jPanel1.repaint();
+        try {
+            estela.printPoints(graphics);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_jPanel1MouseMoved
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {                                           

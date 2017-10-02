@@ -1,4 +1,5 @@
 
+import java.awt.Graphics;
 import java.awt.Point;
 import java.util.LinkedList;
 import java.util.Deque;
@@ -18,7 +19,7 @@ public class Estela {
     public void setPoints(Point point) {
         points.addFirst(point);
         if(points.size()>5){
-            deletePoint(points.removeLast());
+            points.removeLast();
         } 
         
     }
@@ -29,6 +30,14 @@ public class Estela {
 
     private void deletePoint(Point removeLast) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public void printPoints(Graphics graphics) throws InterruptedException{
+        
+        for (Point point : points) {
+            graphics.drawOval((int)point.getX(),(int)point.getY(),5,5);
+            Thread.sleep(10);
+        }
     }
 
 }
