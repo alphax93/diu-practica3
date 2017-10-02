@@ -45,6 +45,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Rodríguez Grimón, Samuel del Pino");
 
+        jPanel1.setBackground(java.awt.Color.lightGray);
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -63,16 +64,21 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 325, Short.MAX_VALUE)
         );
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amarillo", "Verde", "Azul", "Rojo" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gris", "Amarillo", "Verde", "Azul", "Rojo" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amarillo", "Verde", "Azul", "Rojo" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Negro", "Amarillo", "Verde", "Azul", "Rojo" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Círculo", "Triángulo", "Cuadrado" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Círculo", "X", "Cuadrado" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
@@ -154,15 +160,24 @@ public class MainFrame extends javax.swing.JFrame {
         estela.setPoints(evt.getPoint());
         jPanel1.repaint();
         try {
+            
             estela.printPoints(graphics);
         } catch (InterruptedException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jPanel1MouseMoved
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        
         int tmp = jComboBox2.getSelectedIndex();
-    }
+        if(tmp ==0){
+            estela.setColor(Color.BLACK);
+        }else {
+            estela.setColor(color[tmp]);
+        }
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+   
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -205,7 +220,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-    private Color[] color = {Color.YELLOW, Color.GREEN, Color.BLUE, Color.RED};
+    private Color[] color = {Color.LIGHT_GRAY,Color.YELLOW, Color.GREEN, Color.BLUE, Color.RED};
     private Graphics graphics;
     private Estela estela;
+    
+    
+   
 }

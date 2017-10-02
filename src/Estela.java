@@ -1,13 +1,19 @@
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.LinkedList;
 import java.util.Deque;
 
-public class Estela {
+public class Estela{
 
     private Deque<Point> points;
     private String forma;
+    private Color color;
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
 
     
     public Estela(){
@@ -28,16 +34,22 @@ public class Estela {
         this.forma=forma;
     }
 
-    private void deletePoint(Point removeLast) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+       
     public void printPoints(Graphics graphics) throws InterruptedException{
-        
+        graphics.setColor(color);
         for (Point point : points) {
-            graphics.drawOval((int)point.getX(),(int)point.getY(),5,5);
+            
+            switch(forma){
+            
+                case "Círculo":graphics.fillOval((int)point.getX(),(int)point.getY(),10,10);
+                    break;
+                case "Cuadrado":graphics.fillRect((int)point.getX(),(int)point.getY(),10,10);
+                    break;
+                case "X":graphics.drawString("X", (int)point.getX(),(int)point.getY());
+            }   
             Thread.sleep(10);
         }
     }
+
 
 }

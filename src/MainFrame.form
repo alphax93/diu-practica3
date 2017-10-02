@@ -95,6 +95,9 @@
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
             <BevelBorder/>
@@ -121,11 +124,12 @@
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Amarillo"/>
-            <StringItem index="1" value="Verde"/>
-            <StringItem index="2" value="Azul"/>
-            <StringItem index="3" value="Rojo"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Gris"/>
+            <StringItem index="1" value="Amarillo"/>
+            <StringItem index="2" value="Verde"/>
+            <StringItem index="3" value="Azul"/>
+            <StringItem index="4" value="Rojo"/>
           </StringArray>
         </Property>
       </Properties>
@@ -139,14 +143,18 @@
     <Component class="javax.swing.JComboBox" name="jComboBox2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Amarillo"/>
-            <StringItem index="1" value="Verde"/>
-            <StringItem index="2" value="Azul"/>
-            <StringItem index="3" value="Rojo"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Negro"/>
+            <StringItem index="1" value="Amarillo"/>
+            <StringItem index="2" value="Verde"/>
+            <StringItem index="3" value="Azul"/>
+            <StringItem index="4" value="Rojo"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -156,7 +164,7 @@
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
             <StringItem index="0" value="C&#xed;rculo"/>
-            <StringItem index="1" value="Tri&#xe1;ngulo"/>
+            <StringItem index="1" value="X"/>
             <StringItem index="2" value="Cuadrado"/>
           </StringArray>
         </Property>
