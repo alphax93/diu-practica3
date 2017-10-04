@@ -83,7 +83,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Círculo", "X", "Cuadrado" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Círculo", "Cruz", "Cuadrado" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
@@ -165,7 +165,6 @@ public class MainFrame extends javax.swing.JFrame {
         estela.setPoints(evt.getPoint());
         jPanel1.repaint();
         try {
-            
             estela.printPoints(graphics);
         } catch (InterruptedException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);

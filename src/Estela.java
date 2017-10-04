@@ -11,17 +11,16 @@ public class Estela{
     private String forma;
     private Color color;
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    
     public Estela(){
         points = new LinkedList<>();
         forma = "Círculo";
-        
+        color = Color.BLACK;
     }
 
+    public void setColor(Color color) {
+        this.color = color;
+    }
+    
     public void setPoints(Point point) {
         points.addFirst(point);
         if(points.size()>5){
@@ -45,9 +44,9 @@ public class Estela{
                     break;
                 case "Cuadrado":graphics.fillRect((int)point.getX(),(int)point.getY(),10,10);
                     break;
-                case "X":graphics.drawString("X", (int)point.getX(),(int)point.getY());
+                case "Cruz":graphics.drawString("X", (int)point.getX(),(int)point.getY());
             }   
-            Thread.sleep(10);
+            Thread.sleep(5);
         }
     }
 
